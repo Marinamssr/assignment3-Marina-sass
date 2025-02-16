@@ -1,19 +1,19 @@
 @use "sass:color";
 
-/* ✅ Define SCSS Variables */
+
 $primary-color: #ffffff;
 $secondary-color: #6cb5d0;
 $font-stack: Arial, sans-serif;
 $padding: 10px;
 $border-radius: 3px;
 
-/* ✅ Apply Background Color */
+
 body {
   background-color: $primary-color;
   font-family: $font-stack;
 }
 
-/* ✅ Navigation Styling */
+
 nav {
   background: $primary-color;
 
@@ -34,14 +34,14 @@ nav {
   }
 }
 
-/* ✅ Mixin for Flex Centering */
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ✅ Mixin for Button Styling */
+
 @mixin button-style($bg-color) {
   background: $bg-color;
   padding: $padding;
@@ -55,12 +55,12 @@ nav {
   }
 }
 
-/* ✅ Apply Mixins */
+
 .container {
   @include flex-center;
 }
 
-/* ✅ Button Styling */
+
 .btn {
   @include button-style($secondary-color);
   padding: 12px 24px;
