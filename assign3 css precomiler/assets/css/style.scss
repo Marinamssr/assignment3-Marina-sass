@@ -1,0 +1,69 @@
+@use "sass:color";
+
+
+$primary-color: #ffffff;
+$secondary-color: #6cb5d0;
+$font-stack: Arial, sans-serif;
+$padding: 10px;
+$border-radius: 3px;
+
+
+body {
+  background-color: $primary-color;
+  font-family: $font-stack;
+}
+
+
+nav {
+  background: $primary-color;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  color: white;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: color.adjust($bg-color, $lightness: -10%);
+  }
+}
+
+
+.container {
+  @include flex-center;
+}
+
+
+.btn {
+  @include button-style($secondary-color);
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
