@@ -1,0 +1,19 @@
+body {
+  background-color: blue;
+}
+
+nav {
+  background: #79a691;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
